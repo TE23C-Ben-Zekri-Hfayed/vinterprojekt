@@ -6,7 +6,7 @@ class ShapeDrawingGame
 {
     static void Main()
     {
-        Raylib.InitWindow(800, 600, "Shape Drawing Game");
+        Raylib.InitWindow(1920, 1080, "Shape Drawing Game");
         Raylib.SetTargetFPS(60);
 
         string shapeInput = ""; // input text, make sure it's empty.
@@ -90,6 +90,11 @@ class ShapeDrawingGame
                         Raylib.DrawRectangle((int)shapePosition.X - 50, (int)shapePosition.Y - 50, 100, 100, shapeColor);
                         Raylib.DrawText("Press TAB to draw again.", 20, 50, 30, Color.Red);
                         break;
+                        case "a shape":
+                         Raylib.DrawText("Not 'a shape'", 20, 50, 30, Color.Red);
+                         Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
+                         break;
+
                     default:
                         // Start the timer when an invalid shape is detected
                         if (!invalidShape)
