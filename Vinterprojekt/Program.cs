@@ -91,9 +91,15 @@ class ShapeDrawingGame
                         Raylib.DrawText("Press TAB to draw again.", 20, 50, 30, Color.Red);
                         break;
                     case "a shape":
-                        Raylib.DrawText("Not 'a shape'", 20, 50, 30, Color.Red);
+                        Raylib.DrawText("Not 'a shape'", 20, 50, 30, Color.Black);
                         Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
                         break;
+                    case "no":
+                        Raylib.DrawText("What do you mean no? Draw.", 20, 50, 30, Color.Black);
+                        Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
+                        break;
+
+
 
                     default:
                         // Start the timer when an invalid shape is detected
@@ -112,6 +118,7 @@ class ShapeDrawingGame
                     shapeInput = "";
                 }
             }
+            
 
             // If an invalid shape was entered, display the "Invalid shape!" message for 1.5 seconds
             if (invalidShape)
