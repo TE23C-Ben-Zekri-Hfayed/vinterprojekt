@@ -4,6 +4,7 @@ using System.Numerics;
 
 class ShapeDrawingGame
 {
+    static int annoy = 0;
     static void Main()
     {
         Raylib.InitWindow(800, 600, "Shape Drawing Game");
@@ -98,6 +99,27 @@ class ShapeDrawingGame
                         Raylib.DrawText("What do you mean no? Draw.", 20, 50, 30, Color.Black);
                         Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
                         break;
+                    case "me no wanna :(":
+                        Raylib.DrawText("You're not cute, draw something.", 20, 50, 30, Color.Black);
+                        Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
+                        break;
+                    case "me no wanna":
+                        Raylib.DrawText("You're not cute, draw something.", 20, 50, 30, Color.Black);
+                        Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
+                        break;
+                    case "nah":
+                        Raylib.DrawText("Stop being a jackass, just listen to me.", 20, 50, 30, Color.Black);
+                        Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
+                        break;
+                    case "i dont want to":
+                        Raylib.DrawText("Draw something NOW!", 20, 50, 30, Color.Black);
+                        Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
+                        break;
+                    case "okay":
+                        Raylib.DrawText("okay well do it.", 20, 50, 30, Color.Black);
+                        Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
+                        break;
+
 
 
 
@@ -118,7 +140,7 @@ class ShapeDrawingGame
                     shapeInput = "";
                 }
             }
-            
+
 
             // If an invalid shape was entered, display the "Invalid shape!" message for 1.5 seconds
             if (invalidShape)
@@ -126,7 +148,7 @@ class ShapeDrawingGame
                 invalidShapeTimer += Raylib.GetFrameTime(); // Increase the timer
                 Raylib.DrawText("Invalid shape!", 50, 200, 30, Color.Red);
 
-                // If 1.5 seconds have passed, reset
+                // If 1.5 seconds have   passed, reset
                 if (invalidShapeTimer >= 1.5f)
                 {
                     invalidShape = false;
