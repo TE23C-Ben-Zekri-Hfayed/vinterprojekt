@@ -1,10 +1,10 @@
 ﻿using Raylib_cs;
+
 using System;
 using System.Numerics;
 
 class ShapeDrawingGame
 {
-    static int annoy = 0;
     static void Main()
     {
         Raylib.InitWindow(800, 600, "Shape Drawing Game");
@@ -21,6 +21,7 @@ class ShapeDrawingGame
         Music background = Raylib.LoadMusicStream("taco.ogg");
         Raylib.PlayMusicStream(background);
 
+        int annoy = 0;
         while (!Raylib.WindowShouldClose())
         {
             Raylib.UpdateMusicStream(background);
@@ -49,13 +50,27 @@ class ShapeDrawingGame
                 // Submit shape when Enter is pressed
                 if (Raylib.IsKeyPressed(KeyboardKey.Enter))
                 {
+                    
                     if (!string.IsNullOrWhiteSpace(shapeInput))
                     {
                         shapeDrawn = true;
                     }
+
+                    switch (shapeInput.ToLower())
+                    {
+                         case "nah":
+                         annoy++;
+                        Raylib.DrawText("You're not cute, draw something.", 20, 50, 30, Color.Black);
+                        Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
+                        break;
+                    }
                 }
             }
 
+if (annoy >= 4)
+{
+     
+}
             // The reset.
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.White);
@@ -109,7 +124,7 @@ class ShapeDrawingGame
                         break;
                     case "nah":
                         Raylib.DrawText("Stop being a jackass, just listen to me.", 20, 50, 30, Color.Black);
-                        Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
+                        Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);                        
                         break;
                     case "i dont want to":
                         Raylib.DrawText("Draw something NOW!", 20, 50, 30, Color.Black);
@@ -119,6 +134,8 @@ class ShapeDrawingGame
                         Raylib.DrawText("okay well do it.", 20, 50, 30, Color.Black);
                         Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
                         break;
+
+
 
 
 
