@@ -3,6 +3,70 @@
 using System;
 using System.Numerics;
 
+// Import necessary libraries
+// Raylib_cs is used for graphics and audio
+
+// Define main class ShapeDrawingGame
+// Initialize window with size 800x600 and title "Shape Drawing Game"
+// Set target FPS to 60
+
+// Declare variables:
+// shapeInput - stores user input for shape selection (initially empty)
+// shapePosition - stores position of shape (set to center of screen)
+// shapeColor - sets default shape color to Blue
+// shapeDrawn - boolean to track if a shape is drawn
+// invalidShape - boolean to check for invalid input
+// invalidShapeTimer - timer to display invalid shape message
+
+// Initialize audio device and load background music "taco.ogg"
+// Play the music
+
+// Variable annoy initialized to 0 (used for user response handling)
+
+// Main game loop (runs until window is closed)
+    // Update music stream and set volume to maximum
+    
+    // Check if shape is not drawn (input mode)
+        // Get character input from keyboard
+        // Append characters to shapeInput if valid ASCII value
+        // Handle backspace key to remove last character
+        
+        // If Enter key is pressed:
+            // Check if shapeInput is not empty
+                // Set shapeDrawn to true
+            
+            // Handle special cases of input (e.g., "nah")
+                // Increase annoy variable
+                // Display message to encourage drawing
+    
+    // Start drawing phase
+    // Clear background with white color
+    
+    // Display input instructions if no shape is drawn
+    // Display user input as text
+    
+    // If shapeDrawn is true, check input and draw corresponding shape
+        // If input is "circle", draw a circle
+        // If input is "rectangle", draw a rectangle
+        // If input is "triangle", draw a triangle
+        // If input is "square", draw a square
+        
+        // Handle responses for non-shape inputs
+            // Display message based on user input (e.g., "no", "nah", etc.)
+            
+        // If shape input is invalid, start invalid shape timer
+    
+    // If Tab key is pressed, reset input and allow new shape entry
+    
+    // If invalidShape flag is set, display "Invalid shape!" message for 1.5 seconds
+        // After 1.5 seconds, reset input and shapeDrawn flag
+    
+    // End drawing
+
+// Close the window when the game loop ends
+
+
+
 class ShapeDrawingGame
 {
     static void Main()
@@ -134,11 +198,6 @@ if (annoy >= 4)
                         Raylib.DrawText("okay well do it.", 20, 50, 30, Color.Black);
                         Raylib.DrawText("Press TAB to draw.", 20, 10, 30, Color.Red);
                         break;
-
-
-
-
-
 
                     default:
                         // Start the timer when an invalid shape is detected
